@@ -1,0 +1,11 @@
+{
+  "homepage": "https://",
+  "description": "十六进制表示文本字符串编码之间转换结果",
+  "version": "2.0",
+  "license": "Unknown",
+  "url": "https://master.dl.sourceforge.net/project/vksoft/LoveString/LoveString2.0.zip",
+  "hash": "sha1:529e63f75a01fe77fd3b199aeb00fff68850dcbd",
+  "bin": [
+      "LoveString.exe"
+  ]
+}
