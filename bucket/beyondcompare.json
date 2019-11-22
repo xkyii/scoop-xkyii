@@ -1,0 +1,21 @@
+{
+  "version": "4.3.2.24472",
+  "description": "Beyond Compare",
+  "license": "Unknown",
+  "architecture": {
+    "64bit": {
+      "url": "https://downloads.sourceforge.net/project/vksoft/BeyondCompare/BeyondCompare-4.3.2.24472-x64.zip",
+      "hash": "sha1:4cf13e8f618d9237364ff56372721a08888ab8e6"
+    },
+    "32bit": {
+      "url": "https://downloads.sourceforge.net/project/vksoft/BeyondCompare/BeyondCompare-4.3.2.24472-x86.zip",
+      "hash": "sha1:1f8ee680bde526b052b9689e469d8ac31657148f"
+    }
+  },
+  "shortcuts": [
+      [
+          "Beyond Compare 4.3.2.24472.exe",
+          "BCompare"
+      ]
+  ]
+}
