@@ -1,0 +1,21 @@
+{
+  "description": "Microsoft Spy++",
+  "version": "16.0.2948.189",
+  "license": "Unknown",
+  "url": "https://downloads.sourceforge.net/project/vksoft/Spyxx/spyxx16.0.2948.189.zip",
+  "hash": "sha1:c526d7d88b2525824754520eee720be914f15f57",
+  "bin": [
+    "spyxx.exe",
+    "spyxx_amd64.exe"
+  ],
+  "shortcuts": [
+      [
+        "spyxx.exe",
+        "spyxx"
+      ],
+      [
+        "spyxx_amd64.exe",
+        "spyxx64"
+      ]
+  ]
+}

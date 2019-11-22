@@ -7,8 +7,8 @@
   "bin": "LoveString.exe",
   "shortcuts": [
       [
-          "LoveString.exe",
-          "LoveString"
+        "LoveString.exe",
+        "LoveString"
       ]
   ]
 }
