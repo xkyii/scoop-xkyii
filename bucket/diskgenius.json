@@ -4,11 +4,11 @@
   "license": "Unknown",
   "architecture": {
     "64bit": {
-      "url": "http://soft.idealme.cn/scoop/DiskGenius4.7.2-X64.exe",
+      "url": "http://soft.idealme.cn/scoop/DiskGenius4.7.2-X64.zip",
       "hash": "sha1:6e7b366c73175fb935e3219a30b3a2991120423b"
     },
     "32bit": {
-      "url": "http://soft.idealme.cn/scoop/DiskGenius4.7.2-X86.exe",
+      "url": "http://soft.idealme.cn/scoop/DiskGenius4.7.2-X86.zip",
       "hash": "sha1:bd5400bd417ba6f34bd68c91cf5113faa8ab1130"
     }
   },
