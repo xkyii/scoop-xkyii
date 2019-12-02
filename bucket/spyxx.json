@@ -2,7 +2,7 @@
   "description": "Microsoft Spy++",
   "version": "16.0.2948.189",
   "license": "Unknown",
-  "url": "https://downloads.sourceforge.net/project/vksoft/Spyxx/Spyxx16.0.2948.189.zip",
+  "url": "http://soft.idealme.cn/scoop/Spyxx16.0.2948.189.zip",
   "hash": "sha1:c3237dfc664006e6a5c545875d7a24438440fb89",
   "bin": [
     "spyxx.exe",
