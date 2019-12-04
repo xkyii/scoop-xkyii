@@ -3,7 +3,7 @@
   "description": "An open-source x64/x32 debugger for windows.",
   "license": "GPL-3.0-only",
   "version": "2018-02-14_22-42",
-  "url": "http://soft.idealme.cn/scoopsnapshot_2018-02-14_22-42.zip",
+  "url": "http://soft.idealme.cn/scoop/snapshot_2018-02-14_22-42.zip",
   "hash": "sha1:736ac703093cd55af839b6cc07f19d87d9397fa4",
   "bin": [
     "release/x96dbg.exe",
