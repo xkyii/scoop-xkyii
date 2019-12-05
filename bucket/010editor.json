@@ -1,0 +1,17 @@
+{
+  "homepage": "http://www.sweetscape.com/010editor/",
+  "description": "010 Editor Edit Anything",
+  "version": "9.0.1",
+  "license": "Unknown",
+  "url": "http://soft.idealme.cn/scoop/010Editor.zip",
+  "hash": "sha1:2b608292bdb83d798663b23b80858f9ec9cdeb4d",
+  "bin": [
+    "010Editor.exe"
+  ],
+  "shortcuts": [
+      [
+        "010Editor.exe",
+        "010Editor"
+      ]
+  ]
+}
