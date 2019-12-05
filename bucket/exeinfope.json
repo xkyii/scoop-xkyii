@@ -1,0 +1,17 @@
+{
+  "homepage": "http://www.exeinfo.xn.pl/",
+  "description": "一种类PEiD查壳程序.",
+  "version": "0.0.5.6",
+  "license": "Unknown",
+  "url": "https://down.52pojie.cn/Tools/PEtools/ExeinfoPe.zip",
+  "hash": "sha1:85B96DD13E1272BACBD017C30183712A6185A16A",
+  "bin": [
+    "ExeinfoPe/exeinfope.exe"
+  ],
+  "shortcuts": [
+      [
+        "ExeinfoPe/exeinfope.exe",
+        "ExeInfoPE"
+      ]
+  ]
+}
