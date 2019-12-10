@@ -1,0 +1,16 @@
+{
+  "description": "测试用",
+  "version": "1.0",
+  "license": "Unknown",
+  "url": "https://www.lanzous.com/i7u01pi.zip",
+  "hash": "sha1:c3237dfc664006e6a5c545875d7a24438440fb89",
+  "bin": [
+    "Everything.exe"
+  ],
+  "shortcuts": [
+      [
+        "Everything.exe",
+        "Test"
+      ]
+  ]
+}
