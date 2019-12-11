@@ -1,9 +1,9 @@
 {
-  "description": "蓝奏云下载",
-  "version": "0.1.1",
+  "description": "Lanzous parse and download",
+  "version": "0.1.2",
   "license": "Unknown",
-  "url": "http://soft.idealme.cn/scoop/lanzous.0.0.1.zip",
-  "hash": "sha1:529e63f75a01fe77fd3b199aeb00fff68850dcbd",
+  "url": "http://soft.idealme.cn/scoop/xk.Lanzous.0.1.2.zip",
+  "hash": "sha1:d76c1140b844d12e21aafa065fde7729036d11e3",
   "bin": [
     "xk.Lanzous.exe",
     "lanzous.ps1"
