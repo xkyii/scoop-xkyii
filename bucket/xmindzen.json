@@ -4,11 +4,11 @@
   "license": "Unknown",
   "architecture": {
     "64bit": {
-      "url": "http://soft.idealme.cn/scoop/XMind-ZEN-2020-10.0.0-x64.7z",
+      "url": "https://www.lanzous.com/i7veksf.7z",
       "hash": "sha1:27066581d6d232e894a453e34678dce72a5d8552"
     },
     "32bit": {
-      "url": "http://soft.idealme.cn/scoop/XMind-ZEN-2020-10.0.0-x86.7z",
+      "url": "https://www.lanzous.com/i7vf0xg.7z",
       "hash": "sha1:3d0d4dbccdb6a24d74d9e6f1d8926f15f8ca2746"
     }
   },
