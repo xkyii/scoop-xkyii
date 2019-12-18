@@ -1,20 +1,20 @@
 {
-  "version": "4.3.2.24472",
+  "version": "4.3.3.24545",
   "description": "Beyond Compare",
   "license": "Unknown",
   "architecture": {
     "64bit": {
-      "url": "http://soft.idealme.cn/scoop/BeyondCompare-4.3.2.24472-x64.zip",
-      "hash": "sha1:4cf13e8f618d9237364ff56372721a08888ab8e6"
+      "url": "https://www.lanzous.com/i7vfz2f.7z",
+      "hash": "sha1:af3f247e3518f34f055d0ad8c6b1b9ba74da3b3c"
     },
     "32bit": {
-      "url": "http://soft.idealme.cn/scoop/BeyondCompare-4.3.2.24472-x86.zip",
-      "hash": "sha1:1f8ee680bde526b052b9689e469d8ac31657148f"
+      "url": "https://www.lanzous.com/i7vfz4h.7z",
+      "hash": "sha1:bf319583d8a198b83ce65bfac32043d5870e371c"
     }
   },
   "shortcuts": [
       [
-          "Beyond Compare 4.3.2.24472.exe",
+          "Beyond_Compare_Pro_v4.3.3.24545_x64_zh-CHS/BCompare.exe",
           "BCompare"
       ]
   ]
