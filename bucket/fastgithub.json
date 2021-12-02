@@ -1,0 +1,26 @@
+{
+  "description": "fast github",
+  "version": "2.1.2",
+  "license": "MIT License",
+  "url": "https://download.fastgit.org/dotnetcore/FastGithub/releases/download/2.1.2/fastgithub_win-x64.zip",
+  "hash": "sha1:b94da67ecf202cc3a9ec45f8569dcf535476722f",
+  "bin": [
+    [
+      "fastgithub_win-x64/fastgithub.exe",
+      "fastgithub",
+      "start"
+    ],
+    "fastgithub_win-x64/FastGithub.UI.exe"
+  ],
+  "shortcuts": [
+    [
+      "fastgithub_win-x64/fastgithub.exe",
+      "fastgithub",
+      "start"
+    ],
+    [
+      "fastgithub_win-x64/FastGithub.UI.exe",
+      "FastGithub.UI"
+    ]
+  ]
+}
