@@ -1,5 +1,5 @@
 {
-  "description": "Nvy is a minimal Neovim client for Windows writeen in C++, It uses DirectWrite to shape and render the grid cells and text.",
+  "description": "Nvy - A Neovim client in C++",
   "version": "0.2.4",
   "license": "MIT License",
   "url": "https://download.fastgit.org/RMichelsen/Nvy/releases/download/v0.2.4/Nvy.exe",
