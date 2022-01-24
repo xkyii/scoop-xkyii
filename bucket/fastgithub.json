@@ -1,9 +1,9 @@
 {
   "description": "fast github",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "license": "MIT License",
-  "url": "https://download.fastgit.org/dotnetcore/FastGithub/releases/download/2.1.2/fastgithub_win-x64.zip",
-  "hash": "sha1:b94da67ecf202cc3a9ec45f8569dcf535476722f",
+  "url": "https://download.fastgit.org/dotnetcore/FastGithub/releases/download/2.1.3/fastgithub_win-x64.zip",
+  "hash": "sha1:93a993a6bbd75b59e3385835d593deed3be05bb9",
   "bin": [
     [
       "fastgithub_win-x64/fastgithub.exe",
