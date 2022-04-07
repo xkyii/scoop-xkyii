@@ -1,0 +1,16 @@
+{
+  "description": "局域网即时通讯",
+  "version": "2.0.220328",
+  "license": "Unknown",
+  "url": "http://ipmsg.org.cn/Download/Feige_Green.zip",
+  "hash": "sha1:0e13bec10e42d4d247677009ef84f3329db514d8",
+  "bin": [
+    "Feige.exe"
+  ],
+  "shortcuts": [
+      [
+        "Feige.exe",
+        "Feige"
+      ]
+  ]
+}
