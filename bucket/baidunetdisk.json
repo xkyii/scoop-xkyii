@@ -1,0 +1,26 @@
+{
+  "homepage": "https://pan.baidu.com/download",
+  "description": "百度网盘PC版 from: ivaquero/scoopet",
+  "version": "7.16.2.4",
+  "url": "http://issuecdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.16.2.4.exe#dl.7z",
+  "hash": "51fc79a9f568f91fdf26f94187a81dbe77801dfb3aecea93f4ce6636891b5b96",
+  "bin": "BaiduNetdisk.exe",
+  "shortcuts": [
+      [
+          "BaiduNetdisk.exe",
+          "百度网盘"
+      ]
+  ],
+  "persist": "users",
+  "post_install": [
+      "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+      "Remove-Item \"$dir\\`$TEMP\" -Recurse"
+  ],
+  "checkver": {
+      "url": "https://pan.baidu.com/disk/cmsdata?do=client",
+      "regex": "BaiduNetdisk_(\\d+.\\d+.\\d+.\\d+).exe"
+  },
+  "autoupdate": {
+      "url": "http://issuecdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_$version.exe#dl.7z"
+  }
+}
