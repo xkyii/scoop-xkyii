@@ -4,6 +4,7 @@
     "homepage": "https://pc.115.com/",
     "license": "BSD-3-Clause",
     "url": "https://down.115.com/client/115pc/win/115pc_1.0.7.7.exe#/dl.7z",
+    "hash": "29004060f45e4dab5a5be26f5620a612891ee27b3a4a0862e97c712bdddba3d4",
     "installer": {
         "script": [
             "Move-Item \"$dir\\115\\Application\\*\" \"$dir\"",
