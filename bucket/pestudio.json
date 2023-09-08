@@ -1,17 +1,24 @@
 {
-  "homepage": "https://www.winitor.com/",
-  "description": "pestudio is used by Computer Emergency Response Teams and Labs worldwide in order to perform Malware Initial Assessment.",
-  "version": "8.99",
-  "license": "Unknown",
-  "url": "https://winitor.com/tools/pestudio/current/92B78E6E-F0FF-46da-83EB-2059BD14669F.zip",
-  "hash": "sha256:CA678854379C3065F4248A2F53CF09CA6540980037C434392C804FD182247941",
-  "bin": [
-    "pestudio/pestudio.exe"
-  ],
+  "version": "9.54",
+  "description": "Spot artifacts of executable files in order to ease and accelerate Malware Initial Assessment.",
+  "homepage": "https://www.winitor.com",
+  "license": "Freeware",
+  "from": "hoilc/scoop-lemon",
+  "url": "https://www.winitor.com/tools/pestudio/current/pestudio.zip",
+  "hash": "ded56a58d7c5e06453f22a875d6a58ec0c07031e1c0873acc06b288a2d9658d8",
+  "extract_dir": "pestudio",
   "shortcuts": [
       [
-        "pestudio/pestudio.exe",
-        "PEStudio"
+          "pestudio.exe",
+          "pestudio"
       ]
-  ]
+  ],
+  "persist": "xml\\settings.xml",
+  "checkver": {
+      "url": "https://www.winitor.com/tools/pestudio/changes.log",
+      "regex": "Version ([\\d.]+)"
+  },
+  "autoupdate": {
+      "url": "https://www.winitor.com/tools/pestudio/current/pestudio.zip"
+  }
 }
