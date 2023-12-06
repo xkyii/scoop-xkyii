@@ -9,11 +9,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.navicat.com.cn/download/navicat162_premium_cs_x64.exe",
-            "hash": "ea6cf3bfef293e08a4a2ff0b02e7e66ff9f1e340612efe56a2239979886884e7"
+            "url": "https://download.navicat.com.cn/download/navicat163_premium_cs_x64.exe",
+            "hash": "7b6202187ff25facef1cbcfb4f56aebfcb081887ecc0b1c3d068eb0f81b5d3e7"
         },
         "32bit": {
-            "url": "https://download.navicat.com.cn/download/navicat162_premium_cs_x86.exe",
+            "url": "https://download.navicat.com.cn/download/navicat163_premium_cs_x86.exe",
             "hash": "8d637aac2f9658a7105dd61f317a23ca4f8f0b269b2236ffa3d606dc81e36547"
         }
     },
