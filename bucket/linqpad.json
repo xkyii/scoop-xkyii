@@ -3,14 +3,14 @@
     "homepage": "https://www.linqpad.net",
     "description": "The .NET programmer’s playground.",
     "url": "https://dlink.host/dropbox/direct/aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpLzQzMW9kZGFya3RjZzBwaTJlazI5Ni9MSU5RUGFkLnY4LjIuNC56aXA_cmxrZXk9YTRrejVqaml4azlxa3IyNGdza281NGF2cSZkbD0w.zip",
-    "hash": "454fa5eddaa43287df02704beb7a9e2c5ac89b8661fd1b6aa9437213b8ccb408",
+    "hash": "bccb363b5d6ebfd35f4d1e48a756e67db4b967486e931684e772b8e20fb40af7",
     "bin": [
-      "LPRun8-x64.exe",
-      "LINQPad8-x64.exe"
+      "LPRun8.exe",
+      "LINQPad8.exe"
     ],
     "shortcuts": [
       [
-        "LINQPad8-x64.exe",
+        "LINQPad8.exe",
         "LinqPad"
       ]
     ]
