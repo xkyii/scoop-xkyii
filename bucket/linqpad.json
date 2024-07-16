@@ -1,17 +1,21 @@
 {
-    "version": "8.3.7",
+    "version": "8.4.11",
     "homepage": "https://www.linqpad.net",
     "description": "The .NET programmer’s playground.",
-    "url": "https://dlink.host/dropbox/direct/aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL242MGQzdHlleGt1dXVicDJtMjU5Ni9MaW5xUGFkLTguMy43LVByZW1pdW0uemlwP3Jsa2V5PW5seTRjdzF5cGE2NTdza3NjOTE2dGpqaXgmc3Q9bDUzYzE5ZG4mZGw9MA.zip",
-    "hash": "048717e3a3e20db4e8c4fa8d8646832b9cc8dc82ef8cd61482f0e57352baa251",
+    "url": "https://dlink.host/dropbox/direct/aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL2lwZmhyaXBicmNyM3dwMDFobmhmay9MSU5RUGFkLVByZW1pdW0tdjguNC4xMS56aXA_cmxrZXk9cW5oYTRwbnJvMXg3bGFoZndic2Nndm9zZyZzdD1idTMxdWV6eiZkbD0w.zip",
+    "hash": "c7884d3e1dde1277429a805367cad3e79f32490f5d951c6ad749cbde4bdc8de9",
     "bin": [
       "LPRun8-x64.exe",
       "LINQPad8-x64.exe"
     ],
     "shortcuts": [
       [
-        "LINQPad8-x64",
+        "LINQPad8-x64.exe",
         "LinqPad8"
+      ],
+      [
+        "LPRun8-x64.exe",
+        "lprun"
       ]
     ]
   }
