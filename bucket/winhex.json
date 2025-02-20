@@ -1,9 +1,10 @@
 {
   "description": "A universal hexadecimal editor",
-  "version": "19.9",
+  "version": "21.4.SR0",
   "license": "Unknown",
-  "url": "https://down.52pojie.cn/Tools/Editors/WinHex_v19.9.zip",
-  "hash": "sha1:4b72c2222ada7ca2a6bdfb3f77aaba4ea3822aab",
+  "url": "https://dlink.host/dropbox/direct/aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL3d6NDFxbm8xcHh3emdrN3h5NGpvMi9XaW5IZXhfdjIxLjRfU1IwLnppcD9ybGtleT1sY21ydTd3cTYyNWYxNnN4NGFuemNvbnUyJnN0PWtwM2FmczkxJmRsPTA.zip",
+  "hash": "sha1:856bd05630587b4625031cfba47f96284724a727",
+  "extract_dir": "WinHex",
   "bin": [
     "WinHex.exe",
     "WinHex64.exe"
