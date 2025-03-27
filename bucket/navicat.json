@@ -1,11 +1,11 @@
 {
-    "version": "17.1.10",
+    "version": "17.2.3",
     "homepage": "https://www.navicat.com.cn",
     "from": "tony-sung/ScoopPersonalBucket",
     "architecture": {
         "64bit": {
             "url": "https://dn.navicat.com/download/navicat17_premium_cs_x64.exe",
-            "hash": "7aed76bdacd6144ff729c64936d174b08c3cc17652766cb6ac5dbba1454cf305"
+            "hash": "d41fd2dedea70fc3f7f2fca6db05c92e4e4a2c7959bba535f5185399a10b8af9"
         }
     },
     "checkver": {
