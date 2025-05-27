@@ -1,9 +1,9 @@
 {
-    "version": "8.7.6",
+    "version": "8.8.9",
     "homepage": "https://www.linqpad.net",
     "description": "The .NET programmer’s playground.",
-    "url": "https://dlink.host/dropbox/direct/aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL2g3ZGgzZWhyeW5vYjVzN3hwMDY3NC9MSU5RUGFkLTguNy40LnppcD9ybGtleT1yNnpnZ2pxYzlzYWYyeTB5dDFqeTQ2bDkxJnN0PTYycmh2N3drJmRsPTA.zip",
-    "hash": "c831fb13f68b71376b89aae6844030962a11614753befaec94712a4919e2cb4a",
+    "url": "https://dlink.host/dropbox/direct/aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL3VoYnBxMXVmZjVrbnJ6eXA2YzFqYi9MaW5xUGFkLTguOC45LnppcD9ybGtleT05aGcybGZjdWs4dGN0ZXdhbHpxMGVsMW03JnN0PTZhdWEzNWIyJmRsPTA.zip",
+    "hash": "30bd2d0408d81c1a0e3829c0a791f846c58cc13f4241fadab0366000d3afce21",
     "bin": [
       "LPRun8-x64.exe",
       "LINQPad8-x64.exe"
