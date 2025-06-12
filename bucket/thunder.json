@@ -1,0 +1,15 @@
+{
+    "version": "12.3.0.3340",
+    "description": "迅雷12 绿色精简版",
+    "homepage": "https://www.52pojie.cn/forum.php?mod=viewthread&tid=2037789",
+    "license": "Unknown",
+    "depends": "sudo",
+    "url": "https://zenlayer.dl.sourceforge.net/project/vksoft/Thunder/Thunder-12.3.0.3340.7z",
+    "hash": "8bbcb0b47c01e600dfa9f73c9609be9817200259216c3ffda0f4e4559521fe3a",
+    "shortcuts": [
+        [
+            "Program/Thunder.exe",
+            "Thunder"
+        ]
+    ]
+}
