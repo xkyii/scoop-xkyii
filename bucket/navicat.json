@@ -5,7 +5,7 @@
     "architecture": {
         "64bit": {
             "url": "https://dn.navicat.com/download/navicat17_premium_cs_x64.exe",
-            "hash": "14ead5d9203ffee4d394612376f44f4a740e94295573de8bb0da2364a5143789"
+            "hash": "8a1f511f128b3b15ca2e5c2124a96bdeb9538ba70b56a9d9ee76367679fec246"
         }
     },
     "checkver": {
