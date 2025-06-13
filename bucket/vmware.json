@@ -1,0 +1,32 @@
+{
+    "homepage": "https://www.vmware.com/",
+    "description": "绿色精简版",
+    "version": "17.6.0",
+    "license": "Unknown",
+    "url": "https://master.dl.sourceforge.net/project/vksoft/VMware/VMware-Workstation-Lite-17.6.7z",
+    "hash": "sha1:815fecc8f096a7795d4c65f3efab20a9075ae50a",
+    "extract_dir": "VMware-Workstation-Lite-17.6.0",
+    "installer": {
+        "script": "Start-Process \"$dir\\注册绿化.cmd\" -WorkingDirectory \"$dir\"  -Wait -Verb RunAs"
+    },
+    "uninstaller": {
+        "script": [
+            "Start-Process \"$dir\\卸载.cmd\" -WorkingDirectory \"$dir\"  -Wait -Verb RunAs",
+            "Write-Host \"The '$app' has been uninstalled.\" -Foreground Magenta"
+        ]
+    },
+    "bin": [
+        "vmplayer.exe",
+        "vmware.exe"
+    ],
+    "shortcuts": [
+        [
+            "vmplayer.exe",
+            "VMplayer"
+        ],
+        [
+            "vmware.exe",
+            "VMware"
+        ]
+    ]
+}
