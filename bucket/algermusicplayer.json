@@ -1,5 +1,5 @@
 {
-    "version": "4.8.0",
+    "version": "4.8.2",
     "description": "一个基于 electron typescript vue3 的桌面音乐播放器",
     "homepage": "https://github.com/algerkong/AlgerMusicPlayer",
     "license": {
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.8.0/AlgerMusicPlayer-4.8.0-win-x64.exe#/dl.7z",
-            "hash": "a0ecefd2a108ff3966132c9178b02a0aa0172db6bbdc66277fc6f25341c94c60",
+            "url": "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.8.2/AlgerMusicPlayer-4.8.2-win-x64.exe#/dl.7z",
+            "hash": "b971e9c69a95d4634b4937f51cc54cf43c71ebde20494c4a4cf240456637fb57",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\" -Force -Recurse"
             ]
         },
         "32bit": {
-            "url": "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.8.0/AlgerMusicPlayer-4.8.0-win-ia32.exe#/dl.7z",
-            "hash": "82025244c3e58dff9c65f0994faf1d223cf2422e9140a41ef75835b2e9318432",
+            "url": "https://github.com/algerkong/AlgerMusicPlayer/releases/download/v4.8.2/AlgerMusicPlayer-4.8.2-win-ia32.exe#/dl.7z",
+            "hash": "ebb736d001311cebdc8cfdab20e776995c1945bfefd82a29fd65863da45e1497",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$*\" -Force -Recurse"
