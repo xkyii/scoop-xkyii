@@ -2,7 +2,7 @@
     "version": "4.9.0",
     "description": "一个基于 electron typescript vue3 的桌面音乐播放器",
     "homepage": "https://github.com/algerkong/AlgerMusicPlayer",
-    "from": "DoveBoy/Apps",z
+    "from": "DoveBoy/Apps",
     "license": {
         "identifier": "Apache-2.0 license",
         "url": "https://github.com/algerkong/AlgerMusicPlayer#Apache-2.0-1-ov-file"
