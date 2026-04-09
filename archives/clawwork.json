@@ -1,0 +1,33 @@
+{
+    "version": "0.0.14",
+    "description": "A community-native AI orchestrator for multi-agent collaboration.",
+    "homepage": "https://github.com/clawwork-ai/ClawWork",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/clawwork-ai/ClawWork/releases/download/v0.0.14/ClawWork-0.0.14-win-x64.exe#/dl.7z",
+            "hash": "57b783f94cea06d77a897bf9294af1867991e0dc0d4da93adcbfaea27171f092"
+        }
+    },
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
+    ],
+    "shortcuts": [
+        [
+            "ClawWork.exe",
+            "ClawWork"
+        ]
+    ],
+    "bin": "ClawWork.exe",
+    "checkver": {
+        "github": "https://github.com/clawwork-ai/ClawWork"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/clawwork-ai/ClawWork/releases/download/v$version/ClawWork-$version-win-x64.exe#/dl.7z"
+            }
+        }
+    }
+}
