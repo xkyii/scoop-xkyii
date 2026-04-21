@@ -1,10 +1,10 @@
 {
-    "version": "0.4.9-1",
+    "version": "0.4.12-1",
     "description": "LM Studio",
     "homepage": "https://lmstudio.ai",
     "license": "Freeware",
-    "url": "https://installers.lmstudio.ai/win32/x64/0.4.9-1/LM-Studio-0.4.9-1-x64.exe#/dl.7z",
-    "hash": "248f065a587a6b23310fc2508ea67691098b03b8584170625be35a7e44d628ca",
+    "url": "https://installers.lmstudio.ai/win32/x64/0.4.12-1/LM-Studio-0.4.12-1-x64.exe#/dl.7z",
+    "hash": "8b8240682e23815ce673b1680fd81df00aa97f0f3ff395ba31c0ad55c6675ca3",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
         "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
