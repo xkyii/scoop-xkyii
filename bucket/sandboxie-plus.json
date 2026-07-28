@@ -1,56 +1,81 @@
 {
-    "version": "1.17.2",
-    "description": "Sandboxie is a sandbox-based isolation software for 32-bit and 64-bit Windows NT-based operating systems.",
-    "homepage": "https://sandboxie-plus.com/",
+    "version": "1.18.1",
+    "description": "An enhanced edition of Sandboxie that provides sandbox-based application isolation on Windows with additional features and a modern interface.",
+    "homepage": "https://sandboxie-plus.com",
     "license": {
-        "identifier": "GPL-3.0-or-later",
-        "url": "https://github.com/sandboxie-plus/Sandboxie/raw/master/LICENSE"
+        "identifier": "Freeware",
+        "url": "https://github.com/sandboxie-plus/Sandboxie/blob/HEAD/LICENSE.Plus"
     },
-    "notes": "Get Sandboxie Classic if you have used Sandboxie for a long time and prefer a familiar environment over new features.",
+    "notes": [
+        "If RamDisk or Encrypted Sandboxes are required, the ImDisk driver must be installed.",
+        "",
+        "For command-line usage, see: https://sandboxie-plus.com/sandboxie/startcommandline/.",
+        "Please note that `sandboxie-start` should be used instead of the `start` command mentioned in the documentation."
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.17.2/Sandboxie-Plus-x64-v1.17.2.exe",
-            "hash": "b7ab56c83f9f56f712d4e9ca57f5ac5a93ab11147805d0ab11f11b97d835908d"
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.18.1/Sandboxie-Plus-x64-v1.18.1.exe",
+            "hash": "9ffccb1991457539a5193127bba58337a5760ab4b462c3744cbd42d0371b5b28"
         },
         "arm64": {
-            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.17.2/Sandboxie-Plus-ARM64-v1.17.2.exe",
-            "hash": "bde888614c737f2c6274ee53200ad1bd4834a796318bceb19a3f147f5e4b888d"
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.18.1/Sandboxie-Plus-ARM64-v1.18.1.exe",
+            "hash": "c7b44d2da641b2a8fa9cb8e842f42f5d55c3ecec2dde6d19a4670970635f4a7f"
         }
     },
-    "innosetup": true,
+    "pre_install": "if (-not (is_admin)) { abort \"`n[ERROR]  $app requires admin rights to $cmd.\" }",
     "installer": {
         "script": [
-            "ensure \"$persist_dir\" | Out-Null",
-            "New-Item \"$env:LOCALAPPDATA\\Sandboxie-Plus\" -ItemType Junction -Target \"$persist_dir\" | Out-Null"
+            "$args_list = @('/verysilent', \"/dir=`\"$dir`\"\")",
+            "Start-Process -FilePath \"$dir\\$fname\" -ArgumentList $args_list -WindowStyle 'Hidden' -Wait",
+            "@(",
+            "    \"$dir\\$fname\", \"$env:USERPROFILE\\Desktop\\Sandboxie-Plus.lnk\"",
+            "    \"$([Environment]::GetFolderPath('CommonStartMenu'))\\Programs\\Sandboxie-Plus\"",
+            ") | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue"
         ]
     },
-    "uninstaller": {
-        "script": "Remove-Item \"$env:LOCALAPPDATA\\Sandboxie-Plus\" -Recurse -Force -ErrorAction 'SilentlyContinue'"
-    },
+    "bin": [
+        [
+            "start.exe",
+            "sandboxie-start"
+        ]
+    ],
     "shortcuts": [
         [
             "SandMan.exe",
-            "Sandboxie-Plus//Sandboxie-Plus"
+            "Sandboxie-Plus\\Sandboxie-Plus"
         ],
         [
             "Start.exe",
-            "Sandboxie-Plus//Run any program sandboxed",
+            "Sandboxie-Plus\\Run any program sandboxed",
             "/box:__ask__ run_dialog"
         ],
         [
             "Start.exe",
-            "Sandboxie-Plus//Run Web browser sandboxed",
+            "Sandboxie-Plus\\Run Web browser sandboxed",
             "default_browser"
         ],
         [
             "Start.exe",
-            "Sandboxie-Plus//Sandboxie Start Menu",
+            "Sandboxie-Plus\\Run Windows Explorer sandboxed",
+            "."
+        ],
+        [
+            "Start.exe",
+            "Sandboxie-Plus\\Sandboxie Start Menu",
             "/box:__ask__ start_menu"
         ]
     ],
+    "pre_uninstall": "if (-not (is_admin)) { abort \"`n[ERROR]  $app requires admin rights to $cmd.\" }",
+    "uninstaller": {
+        "script": [
+            "Stop-Process -Name 'SbieSvc' -Force -ErrorAction SilentlyContinue; Start-Sleep -Milliseconds 1500",
+            "Start-Process -FilePath \"$dir\\unins000.exe\" -ArgumentList @('/verysilent') -WindowStyle 'Hidden' -Wait"
+        ]
+    },
     "checkver": {
-        "url": "https://api.github.com/repos/sandboxie-plus/Sandboxie/releases",
-        "regex": "releases/download/(?<tag>[vV]?[\\d.]+)/Sandboxie-Plus-x64-v([\\d.]+).exe"
+        "github": "https://api.github.com/repos/sandboxie-plus/Sandboxie/releases/latest",
+        "jsonpath": "$.assets[?(@.name =~ /Plus/i)].browser_download_url",
+        "regex": "(?i)download/(?<tag>[^/]+)/Sandboxie-Plus-(?:x|ARM)64-v([\\d.]+)\\.exe"
     },
     "autoupdate": {
         "architecture": {
@@ -60,6 +85,9 @@
             "arm64": {
                 "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/$matchTag/Sandboxie-Plus-ARM64-v$version.exe"
             }
+        },
+        "hash": {
+            "url": "$baseurl/sha256-checksums.txt"
         }
     }
 }
