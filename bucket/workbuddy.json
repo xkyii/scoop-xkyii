@@ -1,13 +1,13 @@
 {
-    "version": "5.3.3",
+    "version": "5.3.8",
     "description": "An AI-native desktop Agent WorkBench",
     "homepage": "https://www.codebuddy.cn/work/",
     "license": "Proprietary",
     "from": "zyqpkg/scoop-bucket",
     "architecture": {
         "64bit": {
-            "url": "https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.3.33961208-5801cce5.exe#dl.7z",
-            "hash": "f7c2027e216c51a0b8e5e39f8717991a560fa59b2a7d23ec37d22c3c4a467f75",
+            "url": "https://download.codebuddy.cn/workbuddy/saas/win32-x64-user/WorkBuddy-win32-x64-user-5.3.8.34705286-e9991e2b.exe#dl.7z",
+            "hash": "c111bc3f54a0e53fa04924313ae660125eebffafcd5ac7722da7c3c03402cb7a",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
