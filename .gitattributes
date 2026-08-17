@@ -1,0 +1,3 @@
+# Normalize all text files to LF in the repository.
+# On Windows (core.autocrlf=true) they are checked out as CRLF.
+* text=auto
