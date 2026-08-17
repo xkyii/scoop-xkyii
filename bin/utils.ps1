@@ -258,7 +258,8 @@ function Remove-Junction {
         $dataPath
     )
     # Delete Junction only
-    $dataPathItem = Get-Item -Path $dataPath
+    if (-not (Test-Path $dataPath)) { return }
+    $dataPathItem = Get-Item -Path $dataPath -Force
     try { $dataPathItem.Delete() } catch {}
 }
 
@@ -275,14 +276,25 @@ function Stop-App {
     }
 
     # 获取所有进程到内存中，提高性能
-    $allProcesses = Get-Process
+    $allProcesses = Get-Process -ErrorAction SilentlyContinue
 
     foreach ($app_dir in $Path) {
-        $allProcesses | Where-Object {
-            $_.Modules.FileName -like "$app_dir\*"
-        } | ForEach-Object {
+        # 逐进程判断，捕获所有访问受保护进程(如 SYSTEM)抛出的异常，避免中断整个脚本
+        $toKill = foreach ($p in $allProcesses) {
+            $inDir = $false
+            try {
+                if ($p.Path -and ($p.Path -like "$app_dir\*")) { $inDir = $true }
+            } catch {}
+            if (-not $inDir) {
+                try {
+                    if (@($p.Modules).Count -gt 0 -and ($p.Modules.FileName -like "$app_dir\*")) { $inDir = $true }
+                } catch {}
+            }
+            if ($inDir) { $p }
+        }
+        $toKill | ForEach-Object {
             Stop-Process -Id $_.Id -Force -ErrorAction SilentlyContinue
-            Wait-Process -Id $_.Id -ErrorAction SilentlyContinue -Timeout 30
+            Wait-Process -Id $_.Id -ErrorAction SilentlyContinue -Timeout 10
         }
     }
 }

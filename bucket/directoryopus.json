@@ -1,72 +1,81 @@
 {
-  "version": "13.16",
-  "description": "Directory Opus 是受欢迎的一款文件管理器。Directory Opus 注重鼠标操作，与倾向于键盘快捷键操作的 Total Commander 形成鲜明的对比。Directory Opus 集成许多非常实用的功能，包括音视频的预览、解压缩处理等。",
-  "homepage": "https://www.gpsoft.com.au/",
-  "from": "kt-devhub/extra",
-  "license": {
-      "identifier": "Proprietary",
-      "url": "https://docs.dopus.com/doku.php?id=licence:end_user"
-  },
-  "url": [
-      "https://alist.xrgzs.top/d/pxy/Software/Tools/Backup/DirectoryOpus/DirectoryOpus_13.16.exe#/installer.exe",
-      "https://alist.xrgzs.top/d/pxy/Software/Tools/Backup/DirectoryOpus/Crack/dopus_patcher_v1.1.exe#/patcher.exe"
-  ],
-  "hash": [
-      "ce2b66e4bf8f247005555d495766568502bc41d25590b8cd598fcbe839199dc6",
-      "14d73c845e621f0ab1f773141b2696d2cebe5b68f6bc37c3ff5f5e5845fce128"
-  ],
-  "bin": "dopusrt.exe",
-  "shortcuts": [
-      [
-          "dopus.exe",
-          "Directory Opus"
-      ]
-  ],
-  "pre_install": [
-      ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-      "New-PersistDirectory \"$env:PROGRAMDATA\\GPSoftware\" \"$persist_dir\\PROGRAMDATA\\GPSoftware\" -Migrate",
-      "New-PersistDirectory \"$env:APPDATA\\GPSoftware\" \"$persist_dir\\APPDATA\\GPSoftware\" -Migrate",
-      "New-PersistDirectory \"$env:LOCALAPPDATA\\GPSoftware\" \"$persist_dir\\LOCALAPPDATA\\GPSoftware\" -Migrate"
-  ],
-  "installer": {
-      "file": "installer.exe",
-      "args": [
-          "/VERYSILENT",
-          "/FORCECLOSEAPPLICATIONS",
-          "/NORESTART",
-          "/TASKS=\"\"",
-          "/DIR=\"$dir\""
-      ]
-  },
-  "post_install": "Invoke-ExternalCommand \"cmd.exe\" -ArgumentList @('/c', \"echo y | `\"$dir\\patcher.exe`\"\") -Quiet -RunAs",
-  "pre_uninstall": [
-      "Start-Sleep -Seconds 5",
-      "$bucket = $install.bucket",
-      ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-      "Stop-App",
-      "Remove-Junction \"$env:PROGRAMDATA\\GPSoftware\"",
-      "Remove-Junction \"$env:APPDATA\\GPSoftware\"",
-      "Remove-Junction \"$env:LOCALAPPDATA\\GPSoftware\""
-  ],
-  "uninstaller": {
-      "file": "unins000.exe",
-      "args": [
-          "/VERYSILENT",
-          "/NORESTART"
-      ]
-  },
-  "checkver": {
-      "url": "https://alist.xrgzs.top/d/pxy/Software/Tools/Backup/DirectoryOpus/DirectoryOpus.exe.ver",
-      "regex": "([\\d.]+)"
-  },
-  "autoupdate": {
-      "url": [
-          "https://alist.xrgzs.top/d/pxy/Software/Tools/Backup/DirectoryOpus/DirectoryOpus_$version.exe#/installer.exe",
-          "https://alist.xrgzs.top/d/pxy/Software/Tools/Backup/DirectoryOpus/Crack/dopus_patcher_v1.1.exe#/patcher.exe"
-      ],
-      "hash": {
-          "url": "$url.sha256",
-          "mode": "extract"
-      }
-  }
+    "version": "13.24",
+    "description": "Directory Opus 是受欢迎的一款文件管理器。Directory Opus 注重鼠标操作，与倾向于键盘快捷键操作的 Total Commander 形成鲜明的对比。Directory Opus 集成许多非常实用的功能，包括音视频的预览、解压缩处理等。",
+    "homepage": "https://www.gpsoft.com.au/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://docs.dopus.com/doku.php?id=licence:end_user"
+    },
+    "depends": "7zip",
+    "url": "https://dlink.host/dropbox/direct/aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL3h3ZHdpb3NpMnN6MWtyazlkZW1tai9EaXJlY3RvcnlPcHVzUHJvLTEzLjI0LnJhcj9ybGtleT1ydWhibmx6MjYxdGI5NG02aWp5a2hkc3JmJnN0PTR1ZTZtNjJ4JmRsPTA.zip",
+    "hash": "78f12c7fcbc1d4d867170c8385ea87b3d29db7078e06433ff44f5275eb963bb1",
+    "bin": "dopusrt.exe",
+    "shortcuts": [
+        [
+            "dopus.exe",
+            "Directory Opus"
+        ]
+    ],
+    "pre_install": [
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "New-PersistDirectory \"$env:PROGRAMDATA\\GPSoftware\" \"$persist_dir\\PROGRAMDATA\\GPSoftware\" -Migrate",
+        "New-PersistDirectory \"$env:APPDATA\\GPSoftware\" \"$persist_dir\\APPDATA\\GPSoftware\" -Migrate",
+        "New-PersistDirectory \"$env:LOCALAPPDATA\\GPSoftware\" \"$persist_dir\\LOCALAPPDATA\\GPSoftware\" -Migrate"
+    ],
+    "installer": {
+        "file": "DOpusInstall-13.24.exe",
+        "args": [
+            "/VERYSILENT",
+            "/FORCECLOSEAPPLICATIONS",
+            "/NORESTART",
+            "/TASKS=\"\"",
+            "/DIR=\"$dir\""
+        ]
+    },
+    "post_install": [
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "Stop-App",
+        "# Apply crack: replace the stock library with the patched one",
+        "if (Test-Path \"$dir\\crack\\dopuslib.dll\") { Copy-Item \"$dir\\crack\\dopuslib.dll\" \"$dir\\dopuslib.dll\" -Force }",
+        "# Run the patcher as an alternative crack (non-fatal if the patched DLL already suffices)",
+        "$patcher = Join-Path $dir '_dopus_patcher.exe'",
+        "if (Test-Path $patcher) { Invoke-ExternalCommand 'cmd.exe' -ArgumentList @('/c', \"echo y | `\"$patcher`\"\") -Quiet -RunAs }",
+        "# Clean up crack artifacts from the app dir",
+        "Remove-Item -Recurse -Force \"$dir\\crack\", $patcher, \"$dir\\readme.txt\" -ErrorAction SilentlyContinue"
+    ],
+    "pre_uninstall": [
+        "Start-Sleep -Seconds 5",
+        "$bucket = $install.bucket",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "# Stop all processes from the app dir",
+        "Stop-App",
+        "# Force-kill the DOpus daemon & GUI so they can't hold file locks / auto-restart",
+        "foreach ($n in 'dopusd','dopus','dopusrt','dopuscm') { Get-Process -Name $n -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue }",
+        "Start-Sleep -Seconds 2",
+        "# Remove the persisted-data junctions (best-effort; never abort on missing paths)",
+        "try { Remove-Junction \"$env:PROGRAMDATA\\GPSoftware\" } catch {}",
+        "try { Remove-Junction \"$env:APPDATA\\GPSoftware\" } catch {}",
+        "try { Remove-Junction \"$env:LOCALAPPDATA\\GPSoftware\" } catch {}"
+    ],
+    "uninstaller": {
+        "script": [
+            "$bucket = $install.bucket",
+            ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+            "Stop-App",
+            "# Run the Inno uninstaller (registry/shell integration cleanup)",
+            "$unins = Join-Path $dir 'unins000.exe'",
+            "if (Test-Path $unins) { Invoke-ExternalCommand $unins -ArgumentList @('/VERYSILENT','/NORESTART') -Activity 'Running uninstaller' -ErrorAction SilentlyContinue }",
+            "# Inno may spawn a (32-bit) child helper that briefly holds dopuslib32.dll/dsrole.dll.",
+            "# Wait and retry removing leftovers so scoop's later Remove-Item finds nothing locked.",
+            "for ($i = 0; $i -lt 10 -and (Test-Path $dir); $i++) {",
+            "    Stop-App",
+            "    Start-Sleep -Seconds 2",
+            "    Remove-Item \"$dir\\*\" -Recurse -Force -ErrorAction SilentlyContinue",
+            "}"
+        ]
+    },
+    "checkver": {
+        "url": "https://www.gpsoft.com.au/",
+        "regex": "13\\.[0-9]+(?:\\.[0-9]+)?"
+    }
 }
