@@ -7,8 +7,8 @@
         "url": "https://docs.dopus.com/doku.php?id=licence:end_user"
     },
     "depends": "7zip",
-    "url": "https://dlink.host/dropbox/direct/aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL3h3ZHdpb3NpMnN6MWtyazlkZW1tai9EaXJlY3RvcnlPcHVzUHJvLTEzLjI0LnJhcj9ybGtleT1ydWhibmx6MjYxdGI5NG02aWp5a2hkc3JmJnN0PTR1ZTZtNjJ4JmRsPTA.zip",
-    "hash": "78f12c7fcbc1d4d867170c8385ea87b3d29db7078e06433ff44f5275eb963bb1",
+    "url": "https://dlink.host/dropbox/direct/aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL2hlMmJjOWtpc2hqd2l1OWNpNW1pcC9EaXJlY3RvcnlPcHVzUHJvLTEzLjI0LnppcD9ybGtleT04ejJzZTBlcXdnaHdxeHExam0zM3JjcjdrJnN0PW80ZXlmN2JsJmRsPTA.zip",
+    "hash": "f47a35536badf95c705d82af34682a44846df0dbcd165f4e593d174aeeea98bb",
     "bin": "dopusrt.exe",
     "shortcuts": [
         [
