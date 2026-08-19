@@ -1,6 +1,6 @@
 {
-    "version": "1.5.0.1408a",
-    "description": "Locate files and folders by name instantly.",
+    "version": "1.5.0.1422b",
+    "description": "Locate files and folders by name instantly (beta version).",
     "homepage": "https://www.voidtools.com",
     "license": "MIT",
     "notes": [
@@ -9,28 +9,24 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://www.voidtools.com/Everything-1.5.0.1408a.x64.zip",
-            "hash": "28984cbb8c3b748e3af5cf0a66cf7d7f0f28dab18483e4381f5e74d3242ddbd2"
+            "url": "https://www.voidtools.com/Everything-1.5.0.1422b.x64.zip",
+            "hash": "e011e7f7b2d7e65aaeb02793685370017da007fb04828531e19155eab201dfe6"
         },
         "32bit": {
-            "url": "https://www.voidtools.com/Everything-1.5.0.1408a.x86.zip",
-            "hash": "d7e211b0c0126fdaa256099e6c6a204ec960f8777b173c11d0d1f1956365fe66"
-        },
-        "arm64": {
-            "url": "https://www.voidtools.com/Everything-1.5.0.1408a.ARM64.zip",
-            "hash": "786a799a301184a428492bd28abb699b99add9f834d10c821c030cf94d27b701"
+            "url": "https://www.voidtools.com/Everything-1.5.0.1422b.x86.zip",
+            "hash": "1a650c2200b28d41516bb8a7b46c870087a61128087f3e8f10601e0c6d270c6d"
         }
     },
     "pre_install": [
         "ensure \"$persist_dir\" | Out-Null",
         "if (Test-Path \"$dir\\Everything64.exe\") { Rename-Item \"$dir\\Everything64.exe\" 'Everything.exe' }",
         "if (!(Test-Path \"$persist_dir\\Everything*.ini\")) { Invoke-ExternalCommand \"$dir\\Everything.exe\" -Args @('-install-config', 'null') | Out-Null }",
-        "Get-ChildItem \"$persist_dir\\*\" -Include 'Bookmarks*.csv', 'Everything.lng', 'Everything*.db', 'Everything*.ini', 'Filters*.csv', 'Plugins*.ini', 'Run History*.csv', 'Search History*.csv', 'Session*.json', 'NO_ALPHA_INSTANCE', 'Omit Results.csv' | Copy-Item -Destination \"$dir\" -ErrorAction SilentlyContinue",
-        "Copy-Item \"$bucketsdir\\versions\\scripts\\everything\\uninstall-context.reg\" \"$dir\\\""
+        "Get-ChildItem \"$persist_dir\\*\" -Include 'Bookmarks*.csv', 'Everything.lng', 'Everything*.db', 'Everything*.ini', 'Filters*.csv', 'Plugins*.ini', 'Run History*.csv', 'Search History*.csv', 'Session*.json', 'Omit Results.csv' | Copy-Item -Destination \"$dir\" -ErrorAction SilentlyContinue",
+        "Copy-Item \"$bucketsdir\\$bucket\\scripts\\everything\\uninstall-context.reg\" \"$dir\\\""
     ],
     "post_install": [
         "$app_path = \"$dir\\Everything.exe\".Replace('\\', '\\\\')",
-        "$reg_content = Get-Content \"$bucketsdir\\versions\\scripts\\everything\\install-context.reg\"",
+        "$reg_content = Get-Content \"$bucketsdir\\$bucket\\scripts\\everything\\install-context.reg\"",
         "$reg_content = $reg_content.replace('$app_path', $app_path)",
         "Set-Content \"$dir\\install-context.reg\" $reg_content -Encoding ASCII"
     ],
@@ -45,7 +41,7 @@
         "    sc.exe delete 'Everything'",
         "}",
         "if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" }",
-        "Get-ChildItem \"$dir\\*\" -Include 'Bookmarks*.csv', 'Everything.lng', 'Everything*.db', 'Everything*.ini', 'Filters*.csv', 'Plugins*.ini', 'Run History*.csv', 'Search History*.csv', 'Session*.json', 'NO_ALPHA_INSTANCE', 'Omit Results.csv' | Copy-Item -Destination \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
+        "Get-ChildItem \"$dir\\*\" -Include 'Bookmarks*.csv', 'Everything.lng', 'Everything*.db', 'Everything*.ini', 'Filters*.csv', 'Plugins*.ini', 'Run History*.csv', 'Search History*.csv', 'Session*.json', 'Omit Results.csv' | Copy-Item -Destination \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
     ],
     "bin": "Everything.exe",
     "shortcuts": [
@@ -56,8 +52,8 @@
     ],
     "persist": "plugins",
     "checkver": {
-        "url": "https://www.voidtools.com/forum/viewtopic.php?f=12&t=9787",
-        "regex": "Everything-([\\d.]+a)\\.x86"
+        "url": "https://www.voidtools.com/forum/viewtopic.php?sd=d&t=9787",
+        "regex": "Everything-([\\d.]+b)\\.x64"
     },
     "autoupdate": {
         "architecture": {
@@ -66,9 +62,6 @@
             },
             "32bit": {
                 "url": "https://www.voidtools.com/Everything-$version.x86.zip"
-            },
-            "arm64": {
-                "url": "https://www.voidtools.com/Everything-$version.ARM64.zip"
             }
         }
     }
