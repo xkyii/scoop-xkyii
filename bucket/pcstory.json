@@ -1,0 +1,23 @@
+{
+    "version": "6.4.2.0",
+    "description": "蘑菇下载器",
+    "homepage": "http://pcstory.fun",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.pcstory.fun/download/pcstory-V6.4.2.0.zip",
+            "hash": "b58d4218935b9d9b0becbc47281993cf801694e812bd09fe4e22cce2593dbec8",
+            "pre_install": [
+                "foreach ($f in @('config.ini','pcstory.dat')) {",
+                "    if (-not (Test-Path \"$persist_dir\\$f\")) {",
+                "        Write-Host 'File' $f 'does not exists. Creating' -f Yellow",
+                "        Set-Content \"$dir\\$f\" $CONT -Encoding Ascii",
+                "    }",
+                "}"
+            ]
+        }
+    },
+    "shortcuts": [["pcstory.exe", "pcstory"]],
+    "bin": "pcstory.exe",
+    "persist": ["config.ini", "pcstory.dat"]
+}
