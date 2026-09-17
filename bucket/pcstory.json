@@ -7,6 +7,7 @@
         "64bit": {
             "url": "https://www.pcstory.fun/download/pcstory-V6.4.2.0.zip",
             "hash": "b58d4218935b9d9b0becbc47281993cf801694e812bd09fe4e22cce2593dbec8",
+            "extract_dir": "pcstory-V6.4.2.0",
             "pre_install": [
                 "foreach ($f in @('config.ini','pcstory.dat')) {",
                 "    if (-not (Test-Path \"$persist_dir\\$f\")) {",
