@@ -4,7 +4,7 @@
     "homepage": "https://www.scootersoftware.com",
     "license": "Proprietary",
     "depends": "7zip",
-    "url": "https://dlink.host/dropbox/direct/aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL3BrYzhqeGQ0M2NjZWQycWZnMjF3aC9CZXlvbmRDb21wYXJlXzUuMi42LnBhZi5leGU_cmxrZXk9cWJpYWZ5ZDMwcjBhcDI4dWpxNm5vN2doYiZzdD0xaGtvZ3FndiZkbD0w.zip",
+    "url": "https://dlink.host/dropbox/direct/aHR0cHM6Ly93d3cuZHJvcGJveC5jb20vc2NsL2ZpL3BrYzhqeGQ0M2NjZWQycWZnMjF3aC9CZXlvbmRDb21wYXJlXzUuMi42LnBhZi5leGU_cmxrZXk9cWJpYWZ5ZDMwcjBhcDI4dWpxNm5vN2doYiZzdD0xaGtvZ3FndiZkbD0w.exe",
     "hash": "7049eba704f7aa1e0cbf93278f841d8960330cf0961e13017635c49ca98cb2e6",
     "pre_install": [
         "Expand-7zipArchive -Path \"$dir\\$fname\" -DestinationPath \"$dir\" -Removal",
