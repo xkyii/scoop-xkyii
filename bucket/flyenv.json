@@ -7,7 +7,7 @@
     "url": "https://github.com/xpf0000/FlyEnv?tab=BSD-3-Clause-1-ov-file"
   },
   "url": "https://github.com/xpf0000/FlyEnv/releases/download/v4.20.2/FlyEnv-Setup-4.20.2.exe",
-  "hash": "fa41ed34b42a2dc4925381ab7c1299f4d72a5ae44825ec43acb9d301aacd1707",
+  "hash": "64fb31b0509ef3020f3b4fb176a2f6f70f3b6f6309ab723c84f8e045af2df719",
   "persist": "PhpWebStudy-Data",
   "pre_install": [
     "# Extract the NSIS installer",
