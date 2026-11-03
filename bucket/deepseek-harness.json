@@ -1,0 +1,45 @@
+{
+    "version": "0.2.1-rc.5",
+    "description": "Open-source agent harness developed by DeepSeek AI (desktop preview).",
+    "homepage": "https://deepseek.com/harness",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://download.deepseek.com/dsh-desk/bin/win-x64/deepseek-harness-0.2.1-rc.5-win-x64.exe#/dl.7z",
+            "hash": "sha512:82ed9d1fe693afaefc7343fc0c6007fe1e01d466967d0223a6c3eb2e397fba42eb40887a0cb56afcc857e0566f27ca3518232870e862c7a5db2dae8a9ad8d75e",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
+            ]
+        }
+    },
+    "post_install": [
+        "# Disable built-in update mechanism to prevent conflicts with Scoop's update management",
+        "$yaml = \"$dir\\resources\\app-update.yml\"",
+        "$content = Get-Content -Path $yaml | Foreach-Object {",
+        "    if ($_.StartsWith('url')) { \"$($_.Replace('url', '# url')) # Disabled by Scoop\" } else { $_ }",
+        "}",
+        "Set-Content $yaml -Value $content -Encoding ascii"
+    ],
+    "shortcuts": [
+        [
+            "DeepSeek Harness.exe",
+            "DeepSeek Harness (Preview)"
+        ]
+    ],
+    "checkver": {
+        "url": "https://download.deepseek.com/dsh-desk/feeds/win-x64/nightly.yml",
+        "regex": "version: ([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.deepseek.com/dsh-desk/bin/win-x64/deepseek-harness-$version-win-x64.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "https://download.deepseek.com/dsh-desk/feeds/win-x64/nightly.yml",
+            "regex": "(?s)sha512:.*?$base64"
+        }
+    }
+}
